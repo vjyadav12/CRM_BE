@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "vercel-pre-build": "chmod +x ./node_modules/.bin/react-scripts",
     "build": "react-scripts build"
   },
   "dependencies": {
