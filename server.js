@@ -10,6 +10,7 @@ const userRoutes = require('./routes/userRoutes');
 
 // Set JWT_SECRET directly if not found in environment variables
 process.env.JWT_SECRET = 'Vijay@0178';
+// hiii
 
 console.log('JWT_SECRET:', process.env.JWT_SECRET);
 
@@ -34,6 +35,11 @@ app.use('/api/users', userRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
+
+// Root route for Vercel
+app.get('/', (req, res) => {
+    res.send('Backend is running!');
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
